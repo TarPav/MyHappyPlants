@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/ripple_color">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/Register_button" />
+            <stroke
+                android:width="5dp"
+                android:color="@color/Register_button_stroke" />
+            <corners android:radius="50dp" />
+
+        </shape>
+
+    </item>
+
+</ripple>

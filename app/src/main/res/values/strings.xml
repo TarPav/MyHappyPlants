@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MyHappyPlants</string>
+    <string name="fragment_start_name_app">My Happy Plants</string>
+    <string name="fragment_start_welcome_text">Welcome!</string>
+    <string name="fragment_start_bottom_text">Log in or Register</string>
+    <string name="Log_In_Button">Log In</string>
+    <string name="Register_Button">Register</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="name_hint">Name</string>
+    <string name="sign_in">Sign In</string>
+    <string name="Confirm_Sign_in">Confirm</string>
+    <string name="Cancel_Sign_in">Cancel</string>
+    <string name="Register_text">Log in</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

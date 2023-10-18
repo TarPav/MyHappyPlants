@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ripple_color">#a0a1a3</color>
+    <color name="Log_In_button">#a155bd</color>
+    <color name="Log_In_button_stroke">#713a85</color>
+    <color name="Register_button">#a155bd</color>
+    <color name="Register_button_stroke">#713a85</color>
+</resources>
