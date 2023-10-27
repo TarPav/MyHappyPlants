@@ -8,12 +8,35 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.myhappyplants.R
 import com.example.myhappyplants.databinding.FragmentLoginPageBinding
+import com.example.myhappyplants.databinding.FragmentRegisterPageBinding
 
 class LoginPageFragment : Fragment() {
+
+    private var _binding: FragmentLoginPageBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_login_page, container, false)
+    ): View {
+        _binding = FragmentLoginPageBinding.inflate(inflater, container, false)
+
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        //TODO change R.id.fragment
+        binding.LogInButton.setOnClickListener {
+            findNavController().navigate(R.id.action_startPageFragment_to_loginPageFragment)
+        }
+        binding.RegisterLoginButton.setOnClickListener {
+            findNavController().navigate(R.id.action_startPageFragment_to_loginPageFragment)
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
