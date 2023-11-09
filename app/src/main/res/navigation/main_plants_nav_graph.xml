@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/startPageFragment"
-        android:name="com.example.myhappyplants.ui.StartPageFragment"
+        android:name="com.example.myhappyplants.ui.fragments.StartPageFragment"
         android:label="StartPageFragment"
         tools:layout="@layout/fragment_start_page">
         <action
@@ -20,12 +20,31 @@
     </fragment>
     <fragment
         android:id="@+id/loginPageFragment"
-        android:name="com.example.myhappyplants.ui.LoginPageFragment"
+        android:name="com.example.myhappyplants.ui.fragments.LoginPageFragment"
         android:label="LoginPageFragment"
-        tools:layout="@layout/fragment_login_page"/>
+        tools:layout="@layout/fragment_login_page">
+        <action
+            android:id="@+id/action_loginPageFragment_to_mainScreenPage_linearLayout"
+            app:destination="@id/mainScreenPage_linearLayout" />
+    </fragment>
     <fragment
         android:id="@+id/registerPageFragment"
-        android:name="com.example.myhappyplants.ui.RegisterPageFragment"
+        android:name="com.example.myhappyplants.ui.fragments.RegisterPageFragment"
         android:label="RegisterPageFragment"
-        tools:layout="@layout/fragment_register_page"/>
+        tools:layout="@layout/fragment_register_page">
+        <action
+            android:id="@+id/action_registerPageFragment_to_mainScreenPage_linearLayout"
+            app:destination="@id/mainScreenPage_linearLayout" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreenPage_linearLayout"
+        android:name="com.example.myhappyplants.ui.fragments.LoginPageFragment"
+        android:label="mainScreenPageFragment"
+        tools:layout="@layout/main_screen_page"/>
+    <fragment
+        android:id="@+id/recyclerPlantsList"
+        android:name="com.example.myhappyplants.ui.fragments.LoginPageFragment"
+        android:label="mainScreenPageFragment"
+        tools:layout="@layout/main_screen_page_layout"/>
+
 </navigation>

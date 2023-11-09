@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/register_background"
-    >
+    android:background="@drawable/register_background">
 
     <TextView
         android:id="@+id/register_textview"
@@ -34,11 +33,11 @@
         android:drawableStart="@drawable/baseline_person_outline_24"
         android:drawablePadding="20dp"
         android:hint="@string/email_hint"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
         android:padding="20dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:inputType="textEmailAddress"
-        android:importantForAutofill="no"/>
+        android:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/password_sign_in"
@@ -53,11 +52,11 @@
         android:drawableStart="@drawable/baseline_password_24"
         android:drawablePadding="20dp"
         android:hint="@string/password_hint"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         android:padding="20dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:importantForAutofill="no"/>
+        android:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/name_sign_in"
@@ -72,20 +71,20 @@
         android:drawableStart="@drawable/baseline_drive_file_rename_outline_24"
         android:drawablePadding="20dp"
         android:hint="@string/name_hint"
+        android:importantForAutofill="no"
         android:inputType="text"
         android:padding="20dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:importantForAutofill="no"/>
+        android:textColorHint="@color/white" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
         android:layout_marginStart="10sp"
         android:layout_marginEnd="10sp"
+        android:layout_marginBottom="50dp"
         android:orientation="horizontal"
         android:weightSum="2">
 
@@ -93,20 +92,20 @@
             android:id="@+id/Sign_In_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:background="@drawable/log_in_button_ripple"
             android:text="@string/Confirm_Sign_in"
-            android:layout_marginEnd="5dp"
             tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/Register_Sign_in_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:background="@drawable/register_button_ripple"
             android:text="@string/Cancel_Sign_in"
-            android:layout_marginStart="5dp"
             tools:ignore="ButtonStyle" />
     </LinearLayout>
 

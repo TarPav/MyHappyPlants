@@ -1,4 +1,4 @@
-package com.example.myhappyplants.ui
+package com.example.myhappyplants.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -3,15 +3,17 @@ package com.example.myhappyplants.network
 import com.example.myhappyplants.data.PlantsModel
 import com.google.gson.annotations.SerializedName
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface PlantsInterface {
     @GET(".")
-    fun getPlants(
+    suspend fun getPlants(
         @Query("limit") amount: Int,
         //The number page you want to see
-        @Query("page") page: Int,
+        //TODO Name like in API
+        @Query("Page") page: Int,
         //A secret/unique number to gain access
         @Query("api_key") key: String = "sk-qci6651db408ab8c92344",
 
@@ -39,5 +41,5 @@ interface PlantsInterface {
 //        @Query("ID") id: Int
 
 
-    ): Call<List<PlantsModel>?>
+    ): Response<List<PlantsModel>?>
 }

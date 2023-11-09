@@ -7,21 +7,24 @@
     app:cardElevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/mainScreenPage_linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="167dp">
+        android:layout_height="167dp"
+        android:background="#673AB7">
+
         <ImageView
             android:id="@+id/image_plant"
             android:layout_width="0dp"
             android:layout_height="100dp"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:background="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/common_name_txt"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.238"
-            android:background="@color/black"/>
+            app:layout_constraintVertical_bias="0.238" />
 
         <TextView
             android:id="@+id/common_name_txt"
@@ -30,7 +33,7 @@
             android:layout_marginStart="196dp"
             android:layout_marginTop="16dp"
             android:text="Common name"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +46,7 @@
             android:layout_marginStart="196dp"
             android:layout_marginTop="8dp"
             android:text="cycle"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +59,7 @@
             android:layout_marginStart="196dp"
             android:layout_marginTop="12dp"
             android:text="watering"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="italic"
             app:layout_constraintStart_toStartOf="parent"

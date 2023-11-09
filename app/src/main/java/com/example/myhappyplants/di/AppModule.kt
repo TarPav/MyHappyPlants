@@ -15,7 +15,7 @@ object AppModule {
     @Provides
     @Singleton
     fun provideBaseURL(): String =
-        "https://perenual.com/api/species-list?key=sk-qci6651db408ab8c92344"
+        "https://perenual.com/api/species-list/"
 
     @Provides
     @Singleton

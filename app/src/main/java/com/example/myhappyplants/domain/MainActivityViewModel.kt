@@ -3,44 +3,39 @@ package com.example.myhappyplants.domain
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.myhappyplants.data.PlantsModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
 @HiltViewModel
-class MainActivityViewModel @Inject constructor(private val repository: PlantsRepository) : ViewModel() {
+class MainActivityViewModel @Inject constructor(private val repository: PlantsRepository) :
+    ViewModel() {
     private var _plantsData = MutableLiveData<List<PlantsModel>?>(null)
     val plantsData: LiveData<List<PlantsModel>?> get() = _plantsData
 
-    fun loadPlants(
-        amount: Int,
-        page: Int,
-    ) {
-        repository.getPlants(
-            amount,
-            page,
-        ).enqueue(
-            object : Callback<List<PlantsModel>?> {
-                override fun onResponse(
-                    call: Call<List<PlantsModel>?>,
-                    response: Response<List<PlantsModel>?>
-                ) {
-                    if (response.isSuccessful) {
-                        _plantsData.postValue(response.body())
+    private var _loadingState = MutableLiveData<Boolean>(false)
+    val loadingState: LiveData<Boolean> get() = _loadingState
 
-                    } else {
-                        _plantsData.postValue(null)
-                    }
-                }
+    fun loadPlants(amount: Int, page: Int) {
+        viewModelScope.launch {
+            _loadingState.value = true
 
-                override fun onFailure(call: Call<List<PlantsModel>?>, t: Throwable) {
-                    _plantsData.postValue(null)
-                }
+            val response = repository.getPlants(amount, page)
+            if (response.isSuccessful) {
+                _plantsData.value = response.body()
+                _loadingState.value = false
+
+            } else {
+                _plantsData.value = null
+                _loadingState.value = false
 
             }
-        )
+        }
+
     }
 }
