@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         binding = MainScreenPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel.loadPlants(15, 1)
+        viewModel.loadPlants(15)
 
         setupViews()
         setupObservers()

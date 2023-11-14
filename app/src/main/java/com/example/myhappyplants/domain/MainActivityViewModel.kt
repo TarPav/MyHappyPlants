@@ -17,12 +17,11 @@ class MainActivityViewModel @Inject constructor(private val repository: PlantsRe
     private var _loadingState = MutableLiveData<Boolean>(false)
     val loadingState: LiveData<Boolean> get() = _loadingState
 
-    fun loadPlants(amount: Int, page: Int) {
+    fun loadPlants(page: Int) {
         viewModelScope.launch {
-            _loadingState.value = true
-
-            val response = repository.getPlants(amount, page)
+            _loadingState.postValue(true)
+            _plantsData.postValue(repository.getPlants(page))
+            _loadingState.postValue(false)
         }
-
     }
 }
