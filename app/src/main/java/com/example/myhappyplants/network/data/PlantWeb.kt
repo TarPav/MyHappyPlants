@@ -6,8 +6,8 @@ import com.google.gson.annotations.SerializedName
 data class PlantWeb(
     @SerializedName("id") val id: Int,
     @SerializedName("common_name") val commonName: String,
-    @SerializedName("default_image") val image: ImageWeb
+    @SerializedName("default_image") val image: ImageWeb?
 
 )
 
-fun PlantWeb.toDomain() = Plant(id, commonName, image.regularUrl)
+fun PlantWeb.toDomain() = Plant(id, commonName, image.toDomain())

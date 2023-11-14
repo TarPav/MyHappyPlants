@@ -11,5 +11,14 @@ data class ImageWeb(
     @SerializedName("medium_url") val mediumUrl: String?,
     @SerializedName("small_url") val smallUrl: String?,
     @SerializedName("thumbnail") val thumbnail: String?
-
 )
+
+fun ImageWeb?.toDomain() : String {
+    if (this == null) return "No URL"
+return smallUrl.takeIf { it != null } ?:
+regularUrl.takeIf { it != null } ?:
+mediumUrl.takeIf { it != null } ?:
+originalUrl.takeIf { it != null } ?:
+thumbnail.takeIf { it != null } ?:
+"No URL"
+}
