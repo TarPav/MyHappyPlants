@@ -1,6 +1,5 @@
 package com.example.myhappyplants.ui
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,20 +8,16 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
-import com.example.myhappyplants.data.PlantsModel
 import com.example.myhappyplants.databinding.MainScreenPageLayoutBinding
+import com.example.myhappyplants.domain.Plant
+import com.example.myhappyplants.ui.PlantsRVAdapter.PlantsViewHolder
 
-class PlantsRVAdapter(
-    //val plantsList: MutableList<PlantsModel>,
-    val context: Context
-) :
-    RecyclerView.Adapter<PlantsRVAdapter.PlantsViewHolder>() {
-
+class PlantsRVAdapter(val context: Context) : RecyclerView.Adapter<PlantsViewHolder>() {
     inner class PlantsViewHolder(val binding: MainScreenPageLayoutBinding) :
         ViewHolder(binding.root) {
-        fun bind(model: PlantsModel) {
+        fun bind(model: Plant) {
             Glide.with(context)
-                .load(model.smallUrl)
+                .load(model.imageURL)
                 .into(binding.imagePlant)
         }
     }
@@ -43,12 +38,13 @@ class PlantsRVAdapter(
         holder.bind(item)
 
     }
-    private val differCallback = object : DiffUtil.ItemCallback<PlantsModel>(){
-        override fun areItemsTheSame(oldItem: PlantsModel, newItem: PlantsModel): Boolean {
+
+    private val differCallback = object : DiffUtil.ItemCallback<Plant>() {
+        override fun areItemsTheSame(oldItem: Plant, newItem: Plant): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: PlantsModel, newItem: PlantsModel): Boolean {
+        override fun areContentsTheSame(oldItem: Plant, newItem: Plant): Boolean {
             return oldItem == newItem
         }
     }

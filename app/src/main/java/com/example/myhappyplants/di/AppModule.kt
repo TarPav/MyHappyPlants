@@ -1,6 +1,6 @@
 package com.example.myhappyplants.di
 
-import com.example.myhappyplants.network.PlantsInterface
+import com.example.myhappyplants.network.PlantAPIService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,8 +14,7 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     @Singleton
-    fun provideBaseURL(): String =
-        "https://perenual.com/api/species-list/"
+    fun provideBaseURL(): String = "https://perenual.com/api/"
 
     @Provides
     @Singleton
@@ -28,7 +27,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providePlatsInterface(retrofit: Retrofit): PlantsInterface{
-        return retrofit.create(PlantsInterface::class.java)
+    fun providePlatsInterface(retrofit: Retrofit): PlantAPIService {
+        return retrofit.create(PlantAPIService::class.java)
     }
 }
