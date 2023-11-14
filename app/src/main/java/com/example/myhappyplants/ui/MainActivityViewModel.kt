@@ -1,9 +1,11 @@
-package com.example.myhappyplants.domain
+package com.example.myhappyplants.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.myhappyplants.domain.Plant
+import com.example.myhappyplants.domain.PlantsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

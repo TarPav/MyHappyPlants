@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/sign_in_background"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <ProgressBar
         android:id="@+id/mainScreenPageProgressBar"
@@ -27,5 +27,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/main_screen_page_layout" />
+        tools:listitem="@layout/item_page_layout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

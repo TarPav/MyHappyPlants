@@ -45,6 +45,6 @@
         android:id="@+id/recyclerPlantsList"
         android:name="com.example.myhappyplants.ui.fragments.LoginPageFragment"
         android:label="mainScreenPageFragment"
-        tools:layout="@layout/main_screen_page_layout"/>
+        tools:layout="@layout/item_page_layout"/>
 
 </navigation>

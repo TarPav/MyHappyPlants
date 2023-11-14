@@ -8,22 +8,23 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
-import com.example.myhappyplants.databinding.MainScreenPageLayoutBinding
+import com.example.myhappyplants.databinding.ItemPageLayoutBinding
 import com.example.myhappyplants.domain.Plant
 import com.example.myhappyplants.ui.PlantsRVAdapter.PlantsViewHolder
 
 class PlantsRVAdapter(val context: Context) : RecyclerView.Adapter<PlantsViewHolder>() {
-    inner class PlantsViewHolder(val binding: MainScreenPageLayoutBinding) :
+    inner class PlantsViewHolder(val binding: ItemPageLayoutBinding) :
         ViewHolder(binding.root) {
-        fun bind(model: Plant) {
+        fun bind(plant: Plant) {
             Glide.with(context)
-                .load(model.imageURL)
+                .load(plant.imageURL)
                 .into(binding.imagePlant)
+            binding.commonNameTxt.text = plant.name
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlantsViewHolder {
-        val binding = MainScreenPageLayoutBinding
+        val binding = ItemPageLayoutBinding
             .inflate(LayoutInflater.from(parent.context), parent, false)
         return PlantsViewHolder(binding)
     }

@@ -1,15 +1,11 @@
-package com.example.myhappyplants
+package com.example.myhappyplants.ui
 
-import android.os.Build.VERSION_CODES.P
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myhappyplants.databinding.MainScreenPageBinding
-import com.example.myhappyplants.domain.MainActivityViewModel
-import com.example.myhappyplants.ui.PlantsRVAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
