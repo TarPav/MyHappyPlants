@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/startPageFragment"
-        android:name="com.example.myhappyplants.ui.fragments.StartPageFragment"
+        android:name="com.example.myhappyplants.ui.screens.startpage.StartPageFragment"
         android:label="StartPageFragment"
         tools:layout="@layout/fragment_start_page">
         <action
@@ -20,31 +20,21 @@
     </fragment>
     <fragment
         android:id="@+id/loginPageFragment"
-        android:name="com.example.myhappyplants.ui.fragments.LoginPageFragment"
+        android:name="com.example.myhappyplants.ui.screens.loginpage.LoginPageFragment"
         android:label="LoginPageFragment"
         tools:layout="@layout/fragment_login_page">
         <action
-            android:id="@+id/action_loginPageFragment_to_mainScreenPage_linearLayout"
-            app:destination="@id/mainScreenPage_linearLayout" />
+            android:id="@+id/action_loginPageFragment_to_plantsListFragment"
+            app:destination="@id/plantsListFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerPageFragment"
-        android:name="com.example.myhappyplants.ui.fragments.RegisterPageFragment"
+        android:name="com.example.myhappyplants.ui.screens.registerpage.RegisterPageFragment"
         android:label="RegisterPageFragment"
-        tools:layout="@layout/fragment_register_page">
-        <action
-            android:id="@+id/action_registerPageFragment_to_mainScreenPage_linearLayout"
-            app:destination="@id/mainScreenPage_linearLayout" />
-    </fragment>
+        tools:layout="@layout/fragment_register_page"/>
     <fragment
-        android:id="@+id/mainScreenPage_linearLayout"
-        android:name="com.example.myhappyplants.ui.fragments.LoginPageFragment"
-        android:label="mainScreenPageFragment"
-        tools:layout="@layout/main_screen_page"/>
-    <fragment
-        android:id="@+id/recyclerPlantsList"
-        android:name="com.example.myhappyplants.ui.fragments.LoginPageFragment"
-        android:label="mainScreenPageFragment"
-        tools:layout="@layout/item_page_layout"/>
+        android:id="@+id/plantsListFragment"
+        android:name="com.example.myhappyplants.ui.screens.plantslist.PlantsListFragment"
+        android:label="PlantsListFragment" />
 
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.myhappyplants.ui.fragments
+package com.example.myhappyplants.ui.screens.startpage
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -28,6 +28,7 @@ class StartPageFragment : Fragment() {
         }
         binding.RegisterButtonStart.setOnClickListener {
             findNavController().navigate(R.id.action_startPageFragment_to_loginPageFragment)
+
         }
     }
     override fun onDestroyView() {

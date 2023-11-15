@@ -1,4 +1,4 @@
-package com.example.myhappyplants.ui.viewmodel
+package com.example.myhappyplants.ui.screens.plantslist
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MainActivityViewModel @Inject constructor(private val repository: PlantsRepository) :
+class PlantsListViewModel @Inject constructor(private val repository: PlantsRepository) :
     ViewModel() {
     private var _plantsData = MutableLiveData<List<Plant>?>(null)
     val plantsData: LiveData<List<Plant>?> get() = _plantsData

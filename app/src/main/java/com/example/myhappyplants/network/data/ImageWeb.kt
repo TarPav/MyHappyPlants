@@ -22,4 +22,4 @@ originalUrl?:
 thumbnail?:
 DEFAULT_URL
 }
-const val DEFAULT_URL = "Default URL"
+const val DEFAULT_URL = "https://top-fon.com/uploads/posts/2023-01/1674674578_top-fon-com-p-fon-dlya-prezentatsii-rostok-2.png"

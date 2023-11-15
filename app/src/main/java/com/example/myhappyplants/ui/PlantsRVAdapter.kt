@@ -22,6 +22,7 @@ class PlantsRVAdapter(val context: Context) : RecyclerView.Adapter<PlantsViewHol
                 .load(plant.imageURL)
                 .override(120, 120)
                 .centerCrop()
+                .transform(RoundedCorners(16))
                 .into(binding.imagePlant)
 
             binding.commonNameTxt.text = plant.name
