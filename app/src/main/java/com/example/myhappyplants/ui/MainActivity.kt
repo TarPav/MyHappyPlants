@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myhappyplants.databinding.MainScreenPageBinding
+import com.example.myhappyplants.ui.viewmodel.MainActivityViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding = MainScreenPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel.loadPlants(15)
+        viewModel.loadPlants(1)
 
         setupViews()
         setupObservers()

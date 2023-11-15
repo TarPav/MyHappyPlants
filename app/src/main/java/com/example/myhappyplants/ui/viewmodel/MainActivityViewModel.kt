@@ -1,4 +1,4 @@
-package com.example.myhappyplants.ui
+package com.example.myhappyplants.ui.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

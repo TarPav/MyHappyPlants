@@ -14,11 +14,12 @@ data class ImageWeb(
 )
 
 fun ImageWeb?.toDomain() : String {
-    if (this == null) return "No URL"
-return smallUrl.takeIf { it != null } ?:
-regularUrl.takeIf { it != null } ?:
-mediumUrl.takeIf { it != null } ?:
-originalUrl.takeIf { it != null } ?:
-thumbnail.takeIf { it != null } ?:
-"No URL"
+    this?: return DEFAULT_URL
+return smallUrl?:
+mediumUrl?:
+regularUrl?:
+originalUrl?:
+thumbnail?:
+DEFAULT_URL
 }
+const val DEFAULT_URL = "Default URL"

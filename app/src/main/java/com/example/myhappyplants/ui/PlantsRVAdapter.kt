@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.myhappyplants.databinding.ItemPageLayoutBinding
 import com.example.myhappyplants.domain.Plant
 import com.example.myhappyplants.ui.PlantsRVAdapter.PlantsViewHolder
@@ -18,8 +20,12 @@ class PlantsRVAdapter(val context: Context) : RecyclerView.Adapter<PlantsViewHol
         fun bind(plant: Plant) {
             Glide.with(context)
                 .load(plant.imageURL)
+                .override(120, 120)
+                .centerCrop()
                 .into(binding.imagePlant)
+
             binding.commonNameTxt.text = plant.name
+            binding.scientificNameTxt.text = plant.scientificName.first()
         }
     }
 
