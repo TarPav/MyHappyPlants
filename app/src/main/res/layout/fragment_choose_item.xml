@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/choose_item_image">
+
+    <TextView
+        android:id="@+id/name_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        tools:text="Common name" />
+
+    <ImageView
+        android:id="@+id/image_imageview"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/name_textview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#673AB7" />
+
+    <TextView
+        android:id="@+id/second_name_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_imageview"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#673AB7"
+        android:fontFamily="@font/abeezee_italic"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        tools:text="Scientific name" />
+
+    <TextView
+        android:id="@+id/cycle_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_name_textview"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#673AB7"
+        android:fontFamily="@font/abeezee_italic"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        tools:text="Cycle" />
+
+
+    <TextView
+        android:id="@+id/watering_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cycle_textview"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#673AB7"
+        android:fontFamily="@font/abeezee_italic"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        tools:text="Watering" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/Sign_In_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.6"
+            android:text="@string/back"
+            app:icon="@drawable/baseline_arrow_back_24"
+
+            />
+
+        <!--        <Button
+                    android:id="@+id/Register_Sign_in_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/register_button_ripple"
+                    android:text="@string/Cancel_Sign_in"
+                    tools:ignore="ButtonStyle" />-->
+    </LinearLayout>
+
+</RelativeLayout>

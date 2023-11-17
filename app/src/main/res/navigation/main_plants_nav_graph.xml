@@ -35,6 +35,17 @@
     <fragment
         android:id="@+id/plantsListFragment"
         android:name="com.example.myhappyplants.ui.screens.plantslist.PlantsListFragment"
-        android:label="PlantsListFragment" />
+        android:label="PlantsListFragment"
+        tools:layout="@layout/fragment_plants_list">
+        <action
+            android:id="@+id/action_plantsListFragment_to_chooseItemFragment"
+            app:destination="@id/chooseItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseItemFragment"
+        android:name="com.example.myhappyplants.ui.screens.chooseitempage.ChooseItemFragment"
+        android:label="ChooseItemFragment"
+        tools:layout="@layout/fragment_choose_item"/>
+
 
 </navigation>

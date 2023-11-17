@@ -21,6 +21,7 @@ class RegisterPageFragment : Fragment() {
 
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -32,6 +33,7 @@ class RegisterPageFragment : Fragment() {
             findNavController().navigate(R.id.action_startPageFragment_to_loginPageFragment)
         }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
